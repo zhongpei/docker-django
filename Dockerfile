@@ -31,19 +31,15 @@ RUN sed -i 's/archive.ubuntu.com/mirrors.163.com/' /etc/apt/sources.list \
 # stop supervisor service as we'll run it manually
 RUN service supervisor stop
 
-
-
 # file management, everything after an ADD is uncached, so we do it as late as
 # possible in the process.
 ADD ./supervisord.conf /etc/supervisord.conf
-
 
 # start supervisor to run our wsgi server
 CMD supervisord -c /etc/supervisord.conf -n
 
 # expose port(s)
 EXPOSE 5000
-
 
 #ADD ./mysql-connector-python_2.0.4-1ubuntu14.04_all.deb /tmp/mysql-connector-python_2.0.4-1ubuntu14.04_all.deb
 #RUN dpkg -i ./tmp/mysql-connector-python_2.0.4-1ubuntu14.04_all.deb
