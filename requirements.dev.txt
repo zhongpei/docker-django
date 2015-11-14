@@ -10,6 +10,9 @@ django-simple-captcha
 django-tables2
 django-templateaddons
 djangorestframework
+nose
+python-termstyle
+rednose
 elasticsearch
 kombu
 Markdown
