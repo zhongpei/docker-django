@@ -11,8 +11,8 @@ ENV DEBIAN_FRONTEND noninteractive
 
 ADD ./requirements.dev.txt /opt/requirements.txt
 # global installs [applies to all envs!]
-RUN sed -i 's/archive.ubuntu.com/mirrors.163.com/' /etc/apt/sources.list \
-	&& apt-get update --fix-missing \
+#RUN sed -i 's/archive.ubuntu.com/mirrors.163.com/' /etc/apt/sources.list \
+RUN	 apt-get update --fix-missing \
 	&& apt-get install -y build-essential git \
 	&& apt-get install -y python python-dev python-setuptools python-pip python-virtualenv  \
 	&& apt-get install -y --no-install-recommends libjpeg-dev libfreetype6-dev  zlib1g-dev libpng12-dev python-imaging  libmysqlclient-dev \
