@@ -11,20 +11,21 @@ ENV DEBIAN_FRONTEND noninteractive
 
 ADD ./requirements.dev.txt /opt/requirements.txt
 # global installs [applies to all envs!]
-# RUN sed -i 's/archive.ubuntu.com/mirrors.163.com/' /etc/apt/sources.list \
-RUN  apt-get update --fix-missing \
+RUN sed -i 's/archive.ubuntu.com/mirrors.163.com/' /etc/apt/sources.list 
+RUN apt-get update --fix-missing \
 	&& apt-get install -y build-essential git \
 	&& apt-get install -y python python-dev python-setuptools python-pip python-virtualenv  \
-	&& apt-get install -y libjpeg-dev libfreetype6-dev  zlib1g-dev libpng12-dev python-imaging  libmysqlclient-dev \
+	&& apt-get install -y --no-install-recommends libjpeg-dev libfreetype6-dev  zlib1g-dev libpng12-dev python-imaging  libmysqlclient-dev \
 	&& apt-get build-dep -y python-imaging python-psycopg2 \
 	&& pip install -r /opt/requirements.txt   -i  http://pypi.douban.com/simple/ \
 	&& pip install MySQL-python -i  http://pypi.douban.com/simple/ \
 	&& pip install supervisor-stdout  -i  http://pypi.douban.com/simple/\
-	&& rm -fr ~/.cache/pip \
-	&& rm -fr /tmp/*\
 	&& apt-get install -y supervisor\
 	&& apt-get remove -y python-dev build-essential libjpeg-dev libfreetype6-dev  zlib1g-dev libpng12-dev libmysqlclient-dev\
-	&& apt-get clean  apt-get purge
+	&& rm -fr ~/.cache/pip \
+	&& rm -fr /tmp/* \
+	&& apt-get clean && apt-get autoremove \
+	&& apt-get purge
 
 
 
