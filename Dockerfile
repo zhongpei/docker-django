@@ -22,7 +22,7 @@ RUN	 apt-get update --fix-missing \
 	&& pip install MySQL-python -i  http://pypi.douban.com/simple/ \
 	&& pip install supervisor-stdout  -i  http://pypi.douban.com/simple/\
 	&& apt-get install -y supervisor\
-	&& apt-get remove -y python-dev build-essential libjpeg-dev libfreetype6-dev  zlib1g-dev libpng12-dev libmysqlclient-dev\
+	&& apt-get remove -y python-dev build-essential libjpeg-dev libfreetype6-dev  zlib1g-dev libpng12-dev \
 	&& rm -fr ~/.cache/pip \
 	&& apt-get -y clean && apt-get -y autoremove \
 	&& apt-get -y purge
