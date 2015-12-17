@@ -25,3 +25,4 @@ django-redis
 elasticutils
 pybloom
 django-reversion
+django-pure-pagination
