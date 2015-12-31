@@ -14,6 +14,7 @@ django-pure-pagination
 django-activeurl
 django-activity-stream
 django-crispy-forms
+django-redis
 djangorestframework
 nose
 python-termstyle
@@ -26,7 +27,6 @@ amqp
 anyjson
 xlwt
 gunicorn
-django-redis
 elasticutils
 pybloom
 MySQL-python
