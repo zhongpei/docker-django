@@ -18,7 +18,6 @@ RUN	 apt-get update --fix-missing \
 	&& pip install -r /opt/requirements.txt   -i  http://pypi.douban.com/simple/ \
 	&& pip install supervisor-stdout  -i  http://pypi.douban.com/simple/\
 	&& apt-get install -y supervisor\
-	&& apt-get remove -y python-dev build-essential libxml2-dev  libxslt-dev  libjpeg-dev libfreetype6-dev  zlib1g-dev libpng12-dev \
 	&& rm -fr ~/.cache/pip \
 	&& apt-get -y clean && apt-get -y autoclean
 
