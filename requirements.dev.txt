@@ -1,5 +1,5 @@
 chardet
-Django<2
+Django<1.9
 django-bootstrap3
 django-celery
 django-filter
@@ -15,6 +15,7 @@ django-activeurl
 django-activity-stream
 django-crispy-forms
 django-redis
+django-jsonfield
 djangorestframework
 nose
 python-termstyle
