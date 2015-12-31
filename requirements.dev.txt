@@ -29,3 +29,4 @@ gunicorn
 django-redis
 elasticutils
 pybloom
+MySQL-python
