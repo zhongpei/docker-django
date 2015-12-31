@@ -1,5 +1,5 @@
 chardet
-Django<1.9
+Django<2
 django-bootstrap3
 django-celery
 django-filter
