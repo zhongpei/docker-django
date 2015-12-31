@@ -1,5 +1,5 @@
 chardet
-Django
+Django<1.9
 django-bootstrap3
 django-celery
 django-filter
@@ -9,6 +9,10 @@ django-mongonaut
 django-simple-captcha
 django-tables2
 django-templateaddons
+django-reversion
+django-pure-pagination
+django-activeurl
+django-activity-stream
 djangorestframework
 nose
 python-termstyle
@@ -24,5 +28,3 @@ gunicorn
 django-redis
 elasticutils
 pybloom
-django-reversion
-django-pure-pagination
