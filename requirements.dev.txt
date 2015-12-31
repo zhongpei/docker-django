@@ -13,6 +13,7 @@ django-reversion
 django-pure-pagination
 django-activeurl
 django-activity-stream
+django-crispy-forms
 djangorestframework
 nose
 python-termstyle
