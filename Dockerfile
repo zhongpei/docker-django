@@ -18,11 +18,11 @@ RUN	 apt-get update --fix-missing \
 	&& apt-get build-dep -y python-imaging python-psycopg2 \
 	&& pip install -r /opt/requirements.txt    \
 	&& pip install supervisor-stdout  \
-	&& chmod +x /opt/geetest.sh && /opt/geetest.sh \
 	&& apt-get install -y supervisor\
 	&& rm -fr ~/.cache/pip \
 	&& apt-get -y clean && apt-get -y autoclean
 
+RUN chmod +x /opt/geetest.sh && /opt/geetest.sh 
 # stop supervisor service as we'll run it manually
 RUN service supervisor stop
 
