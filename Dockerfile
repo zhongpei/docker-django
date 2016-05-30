@@ -9,7 +9,7 @@ RUN ln -sf /bin/true /sbin/initctl
 ENV DEBIAN_FRONTEND noninteractive
 
 ADD ./requirements.txt /opt/requirements.txt
-ADD ./geetest.sh /tmp/geetest.sh
+ADD ./geetest.sh /opt/geetest.sh
 # RUN sed -i 's/archive.ubuntu.com/mirrors.163.com/' /etc/apt/sources.list 
 RUN	 apt-get update --fix-missing \
 	&& apt-get install -y build-essential git \
@@ -18,7 +18,7 @@ RUN	 apt-get update --fix-missing \
 	&& apt-get build-dep -y python-imaging python-psycopg2 \
 	&& pip install -r /opt/requirements.txt    \
 	&& pip install supervisor-stdout  \
-	&& /tmp/geetest.sh \
+	&& chmod +x /opt/geetest.sh && /opt/geetest.sh \
 	&& apt-get install -y supervisor\
 	&& rm -fr ~/.cache/pip \
 	&& apt-get -y clean && apt-get -y autoclean
