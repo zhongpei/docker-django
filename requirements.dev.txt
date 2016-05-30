@@ -1,7 +1,7 @@
 chardet
 Django<1.9
 django-bootstrap3
-django-celery
+django-celery<3
 django-filter
 django-import-export
 django-selectable
@@ -24,7 +24,9 @@ djangorestframework
 django-notifications-hq
 django-two-factor-auth
 django-constance[database]
+django-nyt
 djangoajax
+wiki
 nose
 python-termstyle
 rednose
