@@ -15,8 +15,8 @@ RUN	 apt-get update --fix-missing \
 	&& apt-get install -y python python-dev python-setuptools python-pip python-virtualenv  \
 	&& apt-get install -y --no-install-recommends libxml2-dev  libxslt-dev libjpeg-dev libfreetype6-dev  zlib1g-dev libpng12-dev python-imaging  libmysqlclient-dev \
 	&& apt-get build-dep -y python-imaging python-psycopg2 \
-	&& pip install -r /opt/requirements.txt   -i  http://pypi.douban.com/simple/ \
-	&& pip install supervisor-stdout  -i  http://pypi.douban.com/simple/\
+	&& pip install -r /opt/requirements.txt    \
+	&& pip install supervisor-stdout  \
 	&& apt-get install -y supervisor\
 	&& rm -fr ~/.cache/pip \
 	&& apt-get -y clean && apt-get -y autoclean
