@@ -47,7 +47,6 @@ djangorestframework==3.3.3
 easy-thumbnails==2.3
 elasticsearch==2.3.0
 elasticutils==0.10.3
-geetest==3.0.1
 gunicorn==19.4.5
 html2text==2014.12.29
 jsonfield==1.0.3
