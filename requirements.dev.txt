@@ -3,11 +3,14 @@ Django<1.9
 django-bootstrap3
 django-celery
 django-filter
+django-import-export
+django-selectable
+django-compressor
 django-grappelli
 django-guardian
 django-mongonaut
 django-simple-captcha
-django-tables2
+django-tables2<1.1
 django-templateaddons
 django-reversion
 django-pure-pagination
@@ -16,7 +19,12 @@ django-activity-stream
 django-crispy-forms
 django-redis
 django-jsonfield
+django-userena
 djangorestframework
+django-notifications-hq
+django-two-factor-auth
+django-constance[database]
+djangoajax
 nose
 python-termstyle
 rednose
@@ -31,3 +39,4 @@ gunicorn
 elasticutils
 pybloom
 MySQL-python
+alipay
