@@ -81,3 +81,4 @@ requests-oauthlib==0.4.1
 docker==2.0.0
 docker-pycreds==0.2.1
 django-debug-toolbar==1.6
+django-cachalot==1.4.1
