@@ -8,21 +8,19 @@ RUN ln -sf /bin/true /sbin/initctl
 # no tty
 ENV DEBIAN_FRONTEND noninteractive
 
-ADD ./requirements.txt /opt/requirements.txt
-ADD ./geetest.sh /opt/geetest.sh
+ADD ./requirements /requirements
 # RUN sed -i 's/archive.ubuntu.com/mirrors.163.com/' /etc/apt/sources.list 
 RUN	 apt-get update --fix-missing \
 	&& apt-get install -y build-essential git \
 	&& apt-get install -y python python-dev python-setuptools python-pip python-virtualenv  \
 	&& apt-get install -y --no-install-recommends libxml2-dev  libxslt-dev libjpeg-dev libfreetype6-dev  zlib1g-dev libpng12-dev python-imaging  libmysqlclient-dev \
 	&& apt-get build-dep -y python-imaging python-psycopg2 \
-	&& pip install -r /opt/requirements.txt    \
+	&& pip install -r /requirements/requirements.txt    \
 	&& pip install supervisor-stdout  \
 	&& apt-get install -y supervisor\
 	&& rm -fr ~/.cache/pip \
 	&& apt-get -y clean && apt-get -y autoclean
 
-RUN chmod +x /opt/geetest.sh && /opt/geetest.sh 
 # stop supervisor service as we'll run it manually
 RUN service supervisor stop
 
