@@ -8,6 +8,11 @@ RUN ln -sf /bin/true /sbin/initctl
 # no tty
 ENV DEBIAN_FRONTEND noninteractive
 
+# time zone
+RUN echo "Asia/Shanghai" > /etc/timezone
+RUN dpkg-reconfigure -f noninteractive tzdata
+
+
 ADD ./requirements /requirements
 # RUN sed -i 's/archive.ubuntu.com/mirrors.163.com/' /etc/apt/sources.list 
 RUN	 apt-get update --fix-missing \
@@ -18,6 +23,7 @@ RUN	 apt-get update --fix-missing \
 	&& pip install -r /requirements/base.txt    \
 	&& pip install supervisor-stdout  \
 	&& apt-get install -y supervisor\
+	&& apt-get install -y  mysql-client \
 	&& rm -fr ~/.cache/pip \
 	&& apt-get -y clean && apt-get -y autoclean
 
