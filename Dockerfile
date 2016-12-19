@@ -15,7 +15,7 @@ RUN	 apt-get update --fix-missing \
 	&& apt-get install -y python python-dev python-setuptools python-pip python-virtualenv  \
 	&& apt-get install -y --no-install-recommends libxml2-dev  libxslt-dev libjpeg-dev libfreetype6-dev  zlib1g-dev libpng12-dev python-imaging  libmysqlclient-dev \
 	&& apt-get build-dep -y python-imaging python-psycopg2 \
-	&& pip install -r /requirements/requirements.txt    \
+	&& pip install -r /requirements/base.txt    \
 	&& pip install supervisor-stdout  \
 	&& apt-get install -y supervisor\
 	&& rm -fr ~/.cache/pip \
