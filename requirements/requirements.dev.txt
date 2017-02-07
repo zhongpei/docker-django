@@ -42,3 +42,4 @@ elasticutils
 pybloom
 MySQL-python
 alipay
+django-rest-framework-docs

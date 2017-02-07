@@ -95,3 +95,4 @@ urllib3==1.15.1
 websocket-client==0.40.0
 wiki==0.1.1
 xlwt==1.0.0
+django-rest-framework-docs==0.1.7
