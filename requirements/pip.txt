@@ -47,7 +47,7 @@ djangorestframework==3.3.3
 easy-thumbnails==2.3
 elasticsearch==2.3.0
 elasticutils==0.10.3
-gunicorn==19.4.5
+gunicorn==19.5
 html2text==2014.12.29
 jsonfield==1.0.3
 kombu==3.0.35
@@ -70,7 +70,7 @@ requests==2.9.1
 rjsmin==1.0.12
 six==1.10.0
 sorl-thumbnail==12.3
-tablib==0.11.2
+tablib==0.11.5
 urllib3==1.15.1
 wiki==0.1.1
 xlwt==1.0.0
