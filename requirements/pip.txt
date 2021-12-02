@@ -72,7 +72,7 @@ six==1.10.0
 sorl-thumbnail==12.3
 tablib==0.11.5
 urllib3==1.15.1
-wiki==0.1.1
+wiki==0.7.9
 xlwt==1.0.0
 django-openid-auth==0.4
 oauth2==1.5.211
