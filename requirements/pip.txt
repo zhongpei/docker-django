@@ -3,7 +3,7 @@ amqp==1.4.9
 anyjson==0.3.3
 billiard==3.3.0.23
 bitarray==0.8.1
-celery==3.1.23
+celery==5.2.2
 chardet==2.3.0
 colorama==0.3.7
 diff-match-patch==20121119
