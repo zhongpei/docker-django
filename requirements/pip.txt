@@ -7,7 +7,7 @@ celery==3.1.23
 chardet==2.3.0
 colorama==0.3.7
 diff-match-patch==20121119
-Django==1.8.13
+Django==2.2.28
 django-activeurl==0.1.9
 django-activity-stream==0.6.1
 django-appconf==1.0.2
